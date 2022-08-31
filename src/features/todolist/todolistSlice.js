@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = [
-  { title: 'todo 1', content: 'this is the first todo', key: 0 },
-  { title: 'todo 2', content: 'this is the second todo', key: 1 }
+  { title: 'todo 1', content: 'this is the first todo', key: "0" },
+  { title: 'todo 2', content: 'this is the second todo', key: "1" }
 ]
 
 const todolistSlice = createSlice({
@@ -12,7 +12,7 @@ const todolistSlice = createSlice({
   },
   reducers: {
     addPost: (state, action) => {
-      state.push(action.payload)
+      state.value.push(action.payload)
     }
   }
 })
